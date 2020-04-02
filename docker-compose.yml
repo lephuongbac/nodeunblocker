@@ -1,0 +1,17 @@
+version: '3'
+services:    
+    node:
+        build: 
+            context: .
+        restart: always    
+        expose:
+            - "8080"
+    http:
+        build: 
+            context: .
+            dockerfile: dockerfile-http
+        restart: always    
+        ports:
+            - 80:80
+        # volumes:
+        #     - ./nginx:/etc/nginx/
