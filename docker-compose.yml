@@ -3,7 +3,9 @@ services:
     node:
         build: 
             context: .
-        restart: always    
+        restart: always
+        volumes:
+            - ./html/index.html:/home/user/nodeunblocker.com/public/index.html
         expose:
             - "8080"
     http:
