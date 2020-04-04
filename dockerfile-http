@@ -3,5 +3,5 @@ RUN apt-get clean
 RUN apt-get update
 RUN apt-get install -y nginx
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
-ADD nginx/nginx.conf /etc/nginx/
+#ADD nginx/nginx.conf /etc/nginx/
 EXPOSE 8080

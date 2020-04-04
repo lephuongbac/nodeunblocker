@@ -15,5 +15,6 @@ services:
         restart: always    
         ports:
             - 80:80
-        # volumes:
-        #     - ./nginx:/etc/nginx/
+        volumes:
+            - ./nginx/ketnoiso.conf:/etc/nginx/sites-enabled/ketnoiso.conf # change site.com (!)
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
